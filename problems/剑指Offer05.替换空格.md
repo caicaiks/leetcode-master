@@ -133,8 +133,23 @@ Java：
 
 Python：
 
-
 Go：
+
+```go
+func replaceSpace(s string) string {
+    result := []byte{}
+    for i := range s {
+        if s[i] == ' ' {
+            result = append(result, []byte("%20")...)
+        } else {
+            result = append(result, byte(s[i]))
+        }
+    }
+    return string(result)
+}
+```
+
+
 
 
 
